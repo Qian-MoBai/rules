@@ -1,0 +1,29 @@
+payload:
+  - DST-PORT,22,DIRECT
+  - SRC-PORT,22,DIRECT
+  - DST-PORT,9993,DIRECT
+  # - SRC-PORT,9993,DIRECT
+  - DOMAIN,time.windows.com,DIRECT
+  - DOMAIN-SUFFIX,ea.com,DIRECT
+  - DOMAIN-KEYWORD,epicgames,DIRECT
+  - DOMAIN-SUFFIX,ubisoft.com,DIRECT
+  - DOMAIN-SUFFIX,ubi.com,DIRECT
+  - DOMAIN-SUFFIX,acg.tv,DIRECT
+  - DOMAIN-SUFFIX,acgvideo.com,DIRECT
+  - DOMAIN-SUFFIX,b23.tv,DIRECT
+  - DOMAIN-SUFFIX,hdslb.com,DIRECT
+  - DOMAIN,upos-hz-mirrorakam.akamaized.net,DIRECT
+  - DOMAIN-SUFFIX,fanatical.com,DIRECT
+  - DOMAIN-SUFFIX,humblebundle.com,DIRECT
+  - DOMAIN-SUFFIX,playartifact.com,DIRECT
+  - DOMAIN-SUFFIX,s.team,DIRECT
+  - DOMAIN-SUFFIX,steam-chat.com,DIRECT
+  - DOMAIN-SUFFIX,steamcommunity.com,DIRECT
+  - DOMAIN-SUFFIX,steampowered.com,DIRECT
+  - DOMAIN-SUFFIX,steamgames.com,DIRECT
+  - DOMAIN-SUFFIX,steamstatic.com,DIRECT
+  - DOMAIN-SUFFIX,steamusercontent.com,DIRECT
+  - DOMAIN-SUFFIX,underlords.com,DIRECT
+  - DOMAIN-SUFFIX,valvesoftware.com,DIRECT
+  - DOMAIN-SUFFIX,npmmirror.com,DIRECT
+  - DOMAIN-KEYWORD,asus,DIRECT
