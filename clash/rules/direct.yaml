@@ -2,7 +2,7 @@ payload:
   # Port
   - DST-PORT,22
   - SRC-PORT,22
-  - DST-PORT,9993
+  # - DST-PORT,9993
   # Windows NTP
   - DOMAIN,time.windows.com
   # Games Shopping
