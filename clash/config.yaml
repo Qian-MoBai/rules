@@ -1,5 +1,181 @@
 info-filter: &info-filter "(?i)套餐|到期|有效|剩余|版本|已用|过期|失联|测试|官方|网址|备用|群|TEST|客服|网站|获取|订阅|流量|机场|下次|官址|联系|邮箱|工单|学术|USE|USED|TOTAL|EXPIRE|EMAIL|如果|更新"
 mode: rule
+# IPv6 总开关
+ipv6: true
+log-level: warning
+find-process-mode: strict
+unified-delay: true
+tcp-concurrent: true
+# 代理端口
+port: 7890
+socks-port: 7891
+mixed-port: 7892
+redir-port: 7893
+tproxy-port: 7894
+# TUN 模式
+tun:
+  enable: false
+  device: mihomo
+  stack: mixed
+  auto-route: false
+  auto-redirect: false
+  auto-detect-interface: false
+  disable-icmp-forwarding: true
+# DNS 配置
+dns:
+  enable: true
+  cache-algorithm: arc
+  listen: "127.0.0.1:1053"
+  # 是否解析 IPv6
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - "*.direct"
+    - cable.auth.com
+    - network-test.debian.org
+    - detectportal.firefox.com
+    - resolver1.opendns.com
+    - global.turn.twilio.com
+    - global.stun.twilio.com
+    - app.yinxiang.com
+    - injections.adguard.org
+    - localhost.*.weixin.qq.com
+    - "*.blzstatic.cn"
+    - "*.cmpassport.com"
+    - id6.me
+    - open.e.189.cn
+    - opencloud.wostore.cn
+    - id.mail.wo.cn
+    - mdn.open.wo.cn
+    - hmrz.wo.cn
+    - nishub1.10010.com
+    - enrichgw.10010.com
+    - "*.wosms.cn"
+    - "*.jegotrip.com.cn"
+    - "*.icitymobile.mobi"
+    - "*.pingan.com.cn"
+    - "*.cmbchina.com"
+    - "*.10099.com.cn"
+    - "*.microdone.cn"
+    - PDC._msDCS.*.*
+    - DC._msDCS.*.*
+    - GC._msDCS.*.*
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time-ios.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.qq.com
+    - +.tencent.com
+    - +.srv.nintendo.net
+    - "*.n.n.srv.nintendo.net"
+    - +.cdn.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.battle.net
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - +.stun.*.*.*.*.*
+    - heartbeat.belkin.com
+    - "*.linksys.com"
+    - "*.linksyssmartwifi.com"
+    - "*.router.asus.com"
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - na.b.g-tun.com
+    - +.nflxvideo.net
+    - "*.square-enix.com"
+    - "*.finalfantasyxiv.com"
+    - "*.ffxiv.com"
+    - "*.ff14.sdo.com"
+    - ff.dorado.sdo.com
+    - "*.mcdn.bilivideo.cn"
+    - +.media.dssott.com
+    - shark007.net
+    - Mijia Cloud
+    - +.cmbchina.com
+    - +.cmbimg.com
+    - local.adguard.org
+    - +.sandai.net
+    - +.n0808.com
+    - +.uu.163.com
+    - ps.res.netease.com
+    - +.pub.3gppnetwork.org
+    - checkip.dyndns.com
+    - +.qianmobai.top
+  fake-ip-filter-mode: blacklist
 # 代理集
 proxy-providers:
   provider1:
@@ -11,7 +187,7 @@ proxy-providers:
     header:
     User-Agent:
       - "clash.meta"
-      - "mihomo/1.19.22"
+      - "mihomo/1.19.23"
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -360,7 +536,6 @@ proxy-groups:
       - DIRECT
     include-all: true
     exclude-filter: *info-filter
-
 # 规则
 rules:
   - RULE-SET,mobai-direct,DIRECT
@@ -613,10 +788,15 @@ rule-providers:
     url: "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Download.list"
     interval: 43200
 # 外部控制
-external-controller: 0.0.0.0:9090
+external-controller: 127.0.0.1:9090
 external-ui: ui
 external-ui-name:
 external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
+profile:
+  # 储存 API 对策略组的选择，以供下次启动时使用
+  store-selected: true
+  # 储存 fakeip 映射表
+  store-fake-ip: true
 # GeoSite
 geodata-mode: true
 geodata-loader: memconservative
