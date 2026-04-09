@@ -185,9 +185,9 @@ proxy-providers:
     # 12 小时更新
     interval: 43200
     header:
-    User-Agent:
-      - "clash.meta"
-      - "mihomo/1.19.23"
+      User-Agent:
+        - "clash.meta"
+        - "mihomo/1.19.23"
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
