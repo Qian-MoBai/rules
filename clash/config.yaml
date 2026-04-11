@@ -184,6 +184,7 @@ proxy-providers:
     url:
     # 12 小时更新
     interval: 43200
+    proxy: DIRECT
     header:
       User-Agent:
         - "clash.meta"
